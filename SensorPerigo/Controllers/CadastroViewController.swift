@@ -69,8 +69,14 @@ class CadastroViewController: UIViewController {
             //faz voltar para a tela principal
             navigationController?.popViewController(animated: true)
             
-            
         }
+        let alertController = UIAlertController(title:"Alerta", message: "Nem todos os campos foram preenchidos", preferredStyle: .alert)
+        //criar um action OK
+        let action = UIAlertAction(title: "OK", style: .default, handler:nil)
+        // adicionar no alert
+        alertController.addAction(action)
+        // mostrar na tela
+        self.present(alertController, animated: true, completion: nil)
         
         
     }
